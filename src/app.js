@@ -6,10 +6,12 @@ import { chooseOption, commandName, helpMessage, shipMessage } from "./messages.
 export const commandPrefix = (process.env.COMMAND_PREFIX || "oso").replace(/^\//, "");
 
 export function createSlackApp() {
+  const socketMode = process.env.SLACK_SOCKET_MODE !== "false";
+
   return new App({
     token: process.env.SLACK_BOT_TOKEN,
-    appToken: process.env.SLACK_APP_TOKEN,
-    socketMode: true
+    appToken: socketMode ? process.env.SLACK_APP_TOKEN : undefined,
+    socketMode
   });
 }
 

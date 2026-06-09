@@ -13,8 +13,10 @@ if (missing.length > 0) {
 const app = createSlackApp();
 registerCommands(app);
 
-await app.start();
-console.log("OSO Slack bot is running in Socket Mode.");
+if (process.env.SLACK_SOCKET_MODE !== "false") {
+  await app.start();
+  console.log("OSO Slack bot is running in Socket Mode.");
+}
 
 const port = Number(process.env.PORT || 3000);
 createHttpServer().listen(port, "::", () => {
