@@ -11,35 +11,35 @@
     },
     "slash_commands": [
       {
-        "command": "/oso-ping",
+        "command": "/osobot-ping",
         "description": "Check if the bot is online.",
         "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "",
         "should_escape": false
       },
       {
-        "command": "/oso-help",
+        "command": "/osobot-help",
         "description": "Show the OSO bot command list.",
         "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "",
         "should_escape": false
       },
       {
-        "command": "/oso-joke",
+        "command": "/osobot-joke",
         "description": "Fetch a quick programming joke.",
         "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "",
         "should_escape": false
       },
       {
-        "command": "/oso-choose",
+        "command": "/osobot-choose",
         "description": "Choose one option from a pipe-separated list.",
         "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "pizza | tacos | sushi",
         "should_escape": false
       },
       {
-        "command": "/oso-ship",
+        "command": "/osobot-ship",
         "description": "Get a quick project prompt for building momentum.",
         "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "",
