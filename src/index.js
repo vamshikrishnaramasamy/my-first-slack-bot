@@ -10,10 +10,9 @@ if (missing.length > 0) {
   process.exit(1);
 }
 
-const app = createSlackApp();
-registerCommands(app);
-
 if (process.env.SLACK_SOCKET_MODE !== "false") {
+  const app = createSlackApp();
+  registerCommands(app);
   await app.start();
   console.log("OSO Slack bot is running in Socket Mode.");
 }
