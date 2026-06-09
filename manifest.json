@@ -1,0 +1,68 @@
+{
+  "display_information": {
+    "name": "My First Slack Bot",
+    "description": "A Stardance mission bot with helpful slash commands.",
+    "background_color": "#4a154b"
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "OSO Bot",
+      "always_online": true
+    },
+    "slash_commands": [
+      {
+        "command": "/oso-ping",
+        "description": "Check if the bot is online.",
+        "usage_hint": "",
+        "should_escape": false
+      },
+      {
+        "command": "/oso-help",
+        "description": "Show the OSO bot command list.",
+        "usage_hint": "",
+        "should_escape": false
+      },
+      {
+        "command": "/oso-joke",
+        "description": "Fetch a quick programming joke.",
+        "usage_hint": "",
+        "should_escape": false
+      },
+      {
+        "command": "/oso-choose",
+        "description": "Choose one option from a pipe-separated list.",
+        "usage_hint": "pizza | tacos | sushi",
+        "should_escape": false
+      },
+      {
+        "command": "/oso-ship",
+        "description": "Get a quick project prompt for building momentum.",
+        "usage_hint": "",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "app_mentions:read",
+        "channels:history",
+        "chat:write",
+        "commands"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "bot_events": [
+        "app_mention"
+      ]
+    },
+    "interactivity": {
+      "is_enabled": true
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false
+  }
+}
