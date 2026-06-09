@@ -13,35 +13,35 @@
       {
         "command": "/oso-ping",
         "description": "Check if the bot is online.",
-        "url": "https://oso-bot.vamshikrishnaramasamy.hackclub.app/slack/commands",
+        "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "",
         "should_escape": false
       },
       {
         "command": "/oso-help",
         "description": "Show the OSO bot command list.",
-        "url": "https://oso-bot.vamshikrishnaramasamy.hackclub.app/slack/commands",
+        "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "",
         "should_escape": false
       },
       {
         "command": "/oso-joke",
         "description": "Fetch a quick programming joke.",
-        "url": "https://oso-bot.vamshikrishnaramasamy.hackclub.app/slack/commands",
+        "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "",
         "should_escape": false
       },
       {
         "command": "/oso-choose",
         "description": "Choose one option from a pipe-separated list.",
-        "url": "https://oso-bot.vamshikrishnaramasamy.hackclub.app/slack/commands",
+        "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "pizza | tacos | sushi",
         "should_escape": false
       },
       {
         "command": "/oso-ship",
         "description": "Get a quick project prompt for building momentum.",
-        "url": "https://oso-bot.vamshikrishnaramasamy.hackclub.app/slack/commands",
+        "url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands",
         "usage_hint": "",
         "should_escape": false
       }
@@ -65,7 +65,7 @@
     },
     "interactivity": {
       "is_enabled": true,
-      "request_url": "https://oso-bot.vamshikrishnaramasamy.hackclub.app/slack/commands"
+      "request_url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands"
     },
     "org_deploy_enabled": false,
     "socket_mode_enabled": true,
