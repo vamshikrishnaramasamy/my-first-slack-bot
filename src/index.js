@@ -1,4 +1,5 @@
 import { createSlackApp, registerCommands } from "./app.js";
+import { createHttpServer } from "./http.js";
 
 const requiredEnv = ["SLACK_BOT_TOKEN", "SLACK_APP_TOKEN"];
 const missing = requiredEnv.filter(name => !process.env[name]);
@@ -14,3 +15,8 @@ registerCommands(app);
 
 await app.start();
 console.log("OSO Slack bot is running in Socket Mode.");
+
+const port = Number(process.env.PORT || 3000);
+createHttpServer().listen(port, "127.0.0.1", () => {
+  console.log(`OSO Slack bot HTTP endpoint is listening on 127.0.0.1:${port}.`);
+});

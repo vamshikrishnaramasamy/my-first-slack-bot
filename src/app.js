@@ -3,7 +3,7 @@ import axios from "axios";
 import { App } from "@slack/bolt";
 import { chooseOption, commandName, helpMessage, shipMessage } from "./messages.js";
 
-const commandPrefix = process.env.COMMAND_PREFIX || "oso";
+export const commandPrefix = (process.env.COMMAND_PREFIX || "oso").replace(/^\//, "");
 
 export function createSlackApp() {
   return new App({
@@ -54,4 +54,35 @@ export function registerCommands(app) {
       text: helpMessage(commandPrefix)
     });
   });
+}
+
+export async function handleCommand(command, text = "") {
+  if (command === commandName(commandPrefix, "ping")) {
+    return "Pong from Nest.";
+  }
+
+  if (command === commandName(commandPrefix, "help")) {
+    return helpMessage(commandPrefix);
+  }
+
+  if (command === commandName(commandPrefix, "choose")) {
+    return chooseOption(text);
+  }
+
+  if (command === commandName(commandPrefix, "ship")) {
+    return shipMessage();
+  }
+
+  if (command === commandName(commandPrefix, "joke")) {
+    try {
+      const response = await axios.get("https://official-joke-api.appspot.com/random_joke", {
+        timeout: 5000
+      });
+      return `${response.data.setup}\n\n${response.data.punchline}`;
+    } catch {
+      return "I could not fetch a joke right now. Try again in a bit.";
+    }
+  }
+
+  return helpMessage(commandPrefix);
 }
