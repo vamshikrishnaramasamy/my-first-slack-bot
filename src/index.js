@@ -17,6 +17,6 @@ await app.start();
 console.log("OSO Slack bot is running in Socket Mode.");
 
 const port = Number(process.env.PORT || 3000);
-createHttpServer().listen(port, "127.0.0.1", () => {
-  console.log(`OSO Slack bot HTTP endpoint is listening on 127.0.0.1:${port}.`);
+createHttpServer().listen(port, "0.0.0.0", () => {
+  console.log(`OSO Slack bot HTTP endpoint is listening on 0.0.0.0:${port}.`);
 });
