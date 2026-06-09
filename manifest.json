@@ -58,11 +58,6 @@
     }
   },
   "settings": {
-    "event_subscriptions": {
-      "bot_events": [
-        "app_mention"
-      ]
-    },
     "interactivity": {
       "is_enabled": true,
       "request_url": "https://tune-horizon-gay-utils.trycloudflare.com/slack/commands"
