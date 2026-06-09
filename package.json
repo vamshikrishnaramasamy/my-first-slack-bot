@@ -1,0 +1,25 @@
+{
+  "name": "my-first-slack-bot",
+  "version": "0.1.0",
+  "description": "A Hack Club Slack bot built for the Stardance Slack Bot mission.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "slack",
+    "bolt",
+    "stardance",
+    "hack-club"
+  ],
+  "author": "Vamshi Krishna",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^4.4.0",
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.3"
+  }
+}
